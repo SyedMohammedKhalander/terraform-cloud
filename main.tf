@@ -1,3 +1,8 @@
+provider "aws" {
+  region     =  "us-west-1"
+}
+
+
 resource "aws_instance" "terraform_instance" {
   ami           = "ami-057752b3f1d6c4d6c"
   instance_type = "t2.micro"
@@ -5,7 +10,4 @@ resource "aws_instance" "terraform_instance" {
   tags = {
     Name = "HelloWorld"
   }
-}
-provider "aws" {
-  region     =  "us-west-1"
 }
